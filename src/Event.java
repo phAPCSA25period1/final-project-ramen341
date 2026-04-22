@@ -70,7 +70,6 @@ public class Event {
                 ", counselorName='" + counselorName + '\'' +
                 ", date='" + date + '\'' +
                 ", time='" + time + '\'' +
-                ", location='" + location + '\'' +
                 ", purpose='" + purpose + '\'' +
                 ", confirmed=" + confirmed +
                 '}';
