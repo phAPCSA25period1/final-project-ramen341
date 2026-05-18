@@ -53,7 +53,7 @@ Your commit history is **evidence of your thinking and progress**.
 
 ## 🔁 Agile Development & Sprints
 
-You will complete **4 sprints**.  
+You will complete **4 sprints**.
 Each sprint includes:
 - Planning
 - Building
@@ -65,7 +65,7 @@ Each sprint ends with:
 - A sprint reflection
 - Feedback exchanged with peers
 
-🚫 You may NOT complete multiple sprints at once.  
+🚫 You may NOT complete multiple sprints at once.
 ✅ Each sprint grade is **final**.
 
 ---
@@ -142,7 +142,7 @@ By the end of the project:
 
 # ✨ Final Step: README Update (Very Important)
 
-When your project is complete, you must **rewrite this README**  
+When your project is complete, you must **rewrite this README**
 so it reflects **your software**, not the assignment.
 
 Your final README should include:
@@ -151,26 +151,52 @@ Your final README should include:
 
 ## 🔹 Project Title
 
+Counseling Appointment Booking System
+
 ## 🔹 What This Software Does
-Explain your project in plain language.
+
+This program lets a student view available counselor time slots, book a 30-minute appointment, and review booked appointments.
 
 ## 🔹 Who It’s For
-Describe the user and the problem being solved.
+
+It is designed for students and school counselors who need a simple way to schedule counseling sessions and avoid double-booking.
 
 ## 🔹 How to Run the Program
-Clear steps so someone else can run your project.
+
+1. Open a terminal in the project folder.
+2. Compile the Java source files from the `src` directory with `javac src/*.java`.
+3. Run the driver program with `java -cp src Testing`.
+4. Follow the menu to view available times, book an appointment, or see booked appointments.
 
 ## 🔹 Technical Overview
-Brief description of:
-- Main classes
-- Key data structures
-- Program logic
+
+- Main classes:
+  - `Testing`: driver program and console menu.
+  - `Counselor`: stores counselor name and availability.
+  - `Availability`: stores typical schedule, days off, unavailable times, and bookings.
+  - `AvailabilityService`: computes available appointment slots for the next 7 days.
+  - `Booking`: stores student ID, counselor name, and appointment time.
+- Key data structures:
+  - `List<TimeRange>` for daily available time ranges.
+  - `Set<DayOfWeek>` for active work days.
+  - `List<Booking>` for booked appointments.
+  - `Set<DateRange>` and `Set<TimeRange>` for days off and unavailable periods.
+- Program logic:
+  - Builds a counselor with a typical daily availability window.
+  - Generates 30-minute appointment slots for the next week.
+  - Prevents booking already reserved times.
+  - Supports viewing available times, booking a slot, and listing booked appointments.
 
 ## 🔹 Class Diagram
-Include or link your final class diagram.
+
+![Class Diagram](class-diagram.svg)
 
 ## 🔹 Known Limitations / Future Improvements
-What works well, and what you would improve with more time.
+
+- Currently only supports a single counselor and one default daily time range.
+- Appointment data is not saved between runs; adding file persistence would improve usability.
+- There is limited input validation and no appointment cancellation flow.
+- Future improvements could include multiple counselors, a graphical user interface, and more flexible scheduling rules.
 
 ---
 
@@ -184,6 +210,6 @@ Take pride in:
 - Your code
 - Your documentation
 
-Build something real.  
-Build it thoughtfully.  
+Build something real.
+Build it thoughtfully.
 Build it well.
