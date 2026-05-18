@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Testing",
+      "request": "launch",
+      "mainClass": "Testing",
+      "projectName": "final-project-ramen341_57aca728"
+    },
+    {
+      "type": "java",
       "name": "App",
       "request": "launch",
       "mainClass": "App",
